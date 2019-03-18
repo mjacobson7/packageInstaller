@@ -1,7 +1,7 @@
 class Package {
     constructor(name, dependency) {
         this.name = name;
-        this.dependency = dependency
+        this.dependency = dependency;
     }
 }
 
@@ -24,18 +24,21 @@ class Installer {
             this.checkDependencies(this.packages[key]);
         }
 
+        console.log(this.result); // Result currently logging ['CamelCaser', 'KittenService', 'CamelCaser']
+
     }
 
     checkDependencies(item) {
-        console.log(item)
 
-        // if (!this.packages[key].dependency) {
-        //     this.result.push(this.packages[key].name)
-        // } else {
-        //     // need to add logic to handle nested dependencies here
-        // }
 
-        // console.log(this.result);
+        if (this.packages[item.dependency]) {
+            this.checkDependencies(this.packages[item.dependency])
+        }
+
+        if (!this.result.includes(item.name)) {
+            this.result.push(item.name)
+        }
+
     }
 }
 

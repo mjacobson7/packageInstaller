@@ -6,8 +6,8 @@ class Package {
 }
 
 class Installer {
-    constructor(order, packages) {
-        this.order = [];
+    constructor(result, packages) {
+        this.result = [];
         this.packages = {};
     }
 
@@ -20,9 +20,15 @@ class Installer {
             this.packages[item.split(':')[0]] = new Package(item.split(':')[0], item.split(':')[1].trim() == '' ? null : item.split(':')[1].trim());
         })
 
-        for(let item in this.packages) {
-            
+        for (let key in this.packages) {
+            if (!this.packages[key].dependency) {
+                this.result.push(this.packages[key].name)
+            } else {
+                // need to add logic to handle nested dependencies here
+            }
         }
+
+        console.log(this.result);
     }
 }
 

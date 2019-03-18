@@ -6,23 +6,21 @@ class Package {
 }
 
 class Installer {
-    constructor(order) {
+    constructor(order, packages) {
         this.order = [];
+        this.packages = {};
     }
 
     configure(packages) {
-        let newPkgObj = packages.reduce((newPkgObj, item) => {
-            
-            console.log(item.split(':')[0]) //item name
-            console.log(item.split(':')[1].trim()) //item dependency
+        packages.map(item => {
 
-            console.log(new Package(item.split(':')[0], item.split(':')[1].trim()))
+            // console.log(item.split(':')[0]) //item name
+            // console.log(item.split(':')[1].trim()) //item dependency
 
+            this.packages[item.split(':')[0]] = new Package(item.split(':')[0], item.split(':')[1].trim());
+        })
 
-            
-        }, {})
-
-        console.log(newPkgObj);
+        console.log(this.packages);
     }
 }
 

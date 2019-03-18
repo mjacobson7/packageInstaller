@@ -21,14 +21,21 @@ class Installer {
         })
 
         for (let key in this.packages) {
-            if (!this.packages[key].dependency) {
-                this.result.push(this.packages[key].name)
-            } else {
-                // need to add logic to handle nested dependencies here
-            }
+            this.checkDependencies(this.packages[key]);
         }
 
-        console.log(this.result);
+    }
+
+    checkDependencies(item) {
+        console.log(item)
+
+        // if (!this.packages[key].dependency) {
+        //     this.result.push(this.packages[key].name)
+        // } else {
+        //     // need to add logic to handle nested dependencies here
+        // }
+
+        // console.log(this.result);
     }
 }
 

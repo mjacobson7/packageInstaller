@@ -19,7 +19,7 @@ This exercise is to write the code that will determine the order of install.
 * The function should output a comma separated string of package names in the order of install, such that a package’s dependency will
 * always precede that package.
 
-##Examples
+## Examples
 
 **VALID INPUT EXAMPLE 1**
 
@@ -34,13 +34,12 @@ represents two packages, KittenService and CamelCaser, where KittenService depen
 ```
 The output indicates that CamelCaser needs to be installed before KittenService.
 
-##Installation and Use
+## Installation and Use
 
 ```bash
 npm install
 ```
 
-To run tests:
 ```bash
 npm run test
 ```

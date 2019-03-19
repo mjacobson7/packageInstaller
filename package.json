@@ -1,0 +1,22 @@
+{
+  "name": "packageinstaller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjacobson7/packageInstaller.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjacobson7/packageInstaller/issues"
+  },
+  "homepage": "https://github.com/mjacobson7/packageInstaller#readme",
+  "devDependencies": {
+    "jest": "^24.5.0"
+  }
+}

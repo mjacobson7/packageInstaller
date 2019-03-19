@@ -33,3 +33,14 @@ represents two packages, KittenService and CamelCaser, where KittenService depen
 "CamelCaser, KittenService"
 ```
 The output indicates that CamelCaser needs to be installed before KittenService.
+
+##Installation and Use
+
+```bash
+npm install
+```
+
+To run tests:
+```bash
+npm run test
+```
